@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProject.Views.AddImagePage"
+             xmlns:vm="clr-namespace:MauiProject.ViewModels"
+             xmlns:model="clr-namespace:MauiProject.Models"
+             x:DataType="vm:AddImageViewModel"
+             Title="">
+    <VerticalStackLayout>
+        <HorizontalStackLayout Margin="10">
+            <Button
+            Text="Back" 
+            Command="{Binding BackBtnCommand}"
+            Margin="10"
+            HorizontalOptions="Fill" />
+            <Label 
+            Text="Add Image"
+            FontSize="Header"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        </HorizontalStackLayout>
+        <TableView Margin="10" Intent="Form" MaximumWidthRequest="350">
+            <TableRoot>
+                <TableSection>
+                <EntryCell x:Name="EntryTitle" Label="Title" Placeholder="Enter image title" Text="{Binding InputTitle}"/>
+                <EntryCell x:Name="EntryPath" Label="Path" Placeholder="Enter url path to image" Text="{Binding InputPath}"/>
+            </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button Text="Submit" WidthRequest="100" Command="{Binding SubmitCommand}" HorizontalOptions="Center" Margin="10,10,40,0"/>
+    </VerticalStackLayout>
+</ContentPage>

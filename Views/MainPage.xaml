@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiProject.ViewModels"
+             x:DataType="vm:MainViewModel"
+             x:Class="MauiProject.Views.MainPage"
+             Title="">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Margin="0,0,0,10"
+                Source="dotnet_bot.png"
+                HeightRequest="300"
+                Aspect="AspectFit"/>
+
+            <Label
+                Text="Maui image gallery"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            <Button
+                Text="Gallery" 
+                Command="{Binding ListViewBtnCommand}"
+                HorizontalOptions="Fill" MaximumWidthRequest="150"/>
+            <Button
+                Text="Add Image" 
+                Command="{Binding AddImageBtnCommand}"
+                HorizontalOptions="Fill" MaximumWidthRequest="150"/>
+            <Button
+                Text="Delete Image" 
+                Command="{Binding DeleteBtnCommand}"
+                HorizontalOptions="Fill" MaximumWidthRequest="150"/>
+            <Button
+                Text="Tietoja sovelluksesta" 
+                Command="{Binding AboutBtnCommand}"
+                HorizontalOptions="Fill" MaximumWidthRequest="150"/>
+            <Button
+                Text="Reset" 
+                Command="{Binding ResetBtnCommand}"
+                HorizontalOptions="Fill" MaximumWidthRequest="150"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
