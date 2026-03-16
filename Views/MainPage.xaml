@@ -15,11 +15,7 @@
                 Source="dotnet_bot.png"
                 HeightRequest="300"
                 Aspect="AspectFit"/>
-
-            <Label
-                Text="MAUI Image Gallery"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+          
             <Button
                 Text="Gallery" 
                 Command="{Binding ListViewBtnCommand}"
