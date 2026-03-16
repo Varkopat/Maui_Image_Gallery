@@ -4,7 +4,7 @@
              xmlns:vm="clr-namespace:MauiProject.ViewModels"
              x:DataType="vm:MainViewModel"
              x:Class="MauiProject.Views.MainPage"
-             Title="">
+             Title="MAUI Image Gallery">
 
     <ScrollView>
         <VerticalStackLayout
@@ -17,7 +17,7 @@
                 Aspect="AspectFit"/>
 
             <Label
-                Text="Maui image gallery"
+                Text="MAUI Image Gallery"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
             <Button
@@ -33,12 +33,12 @@
                 Command="{Binding DeleteBtnCommand}"
                 HorizontalOptions="Fill" MaximumWidthRequest="150"/>
             <Button
-                Text="Tietoja sovelluksesta" 
-                Command="{Binding AboutBtnCommand}"
-                HorizontalOptions="Fill" MaximumWidthRequest="150"/>
-            <Button
                 Text="Reset" 
                 Command="{Binding ResetBtnCommand}"
+                HorizontalOptions="Fill" MaximumWidthRequest="150"/>
+            <Button
+                Text="About MauiGalleryApp" 
+                Command="{Binding AboutBtnCommand}"
                 HorizontalOptions="Fill" MaximumWidthRequest="150"/>
         </VerticalStackLayout>
     </ScrollView>

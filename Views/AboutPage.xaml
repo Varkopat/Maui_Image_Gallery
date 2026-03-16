@@ -4,7 +4,7 @@
              xmlns:vm="clr-namespace:MauiProject.ViewModels"
              x:DataType="vm:AboutViewModel"
              x:Class="MauiProject.Views.AboutPage"
-             Title="Tietoja sovelluksesta"
+             Title="MAUI Image Gallery"
              BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}">
 
     <ScrollView>
@@ -38,7 +38,7 @@
                 CornerRadius="8">
                 <VerticalStackLayout Spacing="8">
                     <Label
-                        Text="Versio"
+                        Text="Version"
                         FontAttributes="Bold"
                         FontSize="14"/>
                     <Label
@@ -55,7 +55,7 @@
                 CornerRadius="8">
                 <VerticalStackLayout Spacing="8">
                     <Label
-                        Text="Tietoja"
+                        Text="Info"
                         FontAttributes="Bold"
                         FontSize="14"/>
                     <Label
@@ -73,7 +73,7 @@
                 Margin="0,30,0,20"/>
 
             <Button
-                Text="Takaisin"
+                Text="Back"
                 Command="{Binding GoBackCommand}"
                 HorizontalOptions="Fill"
                 MaximumWidthRequest="150"
